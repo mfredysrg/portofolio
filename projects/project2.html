@@ -17,7 +17,7 @@
 
     <!-- Tombol Kembali ke Beranda Utama -->
     <div class="fixed top-6 left-6 z-50">
-        <a href="../index.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/85 backdrop-blur-md border border-white/10 text-white text-sm font-medium hover:border-primary transition-all shadow-[0_0_15px_rgba(44,103,237,0.3)]">
+        <a href="../index.html#portfolio" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/85 backdrop-blur-md border border-white/10 text-white text-sm font-medium hover:border-primary transition-all shadow-[0_0_15px_rgba(44,103,237,0.3)]">
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
@@ -31,13 +31,13 @@
         <!-- Header Info -->
         <div class="mb-10">
             <span class="text-xs font-mono text-primary uppercase tracking-wider">Publikasi Artikel / Project</span>
-            <h1 class="text-3xl md:text-5xl font-bold text-white mt-2 mb-4">Judul Projek</h1>
-            <p class="text-slate-400 text-lg">Ringkasan singkat projek.</p>
+            <h1 class="text-3xl md:text-5xl font-bold text-white mt-2 mb-4">Web-Based Simple Multi Attribute Rating Technique for Employee Performance Evaluation</h1>
+            <p class="text-slate-400 text-lg">Indonesian Journal of Innovation Studies - Terindeks Sinta 3</p>
         </div>
 
         <!-- Mockup / Dokumentasi Gambar Utama -->
         <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-800/60 aspect-video mb-10 flex items-center justify-center relative backdrop-blur-sm">
-            <span class="text-slate-500 font-mono">Screenshot / Dokumentasi Projek</span>
+            <img src="../assets/kejaksaan1.jpg" alt="Foto bersama pejabat Kejaksaan Negeri Lhokseumawe" class="w-full h-full object-cover">
         </div>
 
         <!-- Detail Deskripsi -->
@@ -46,27 +46,55 @@
                 <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-primary"></span> Latar Belakang Masalah
                 </h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Penjelasan detail mengenai permasalahan yang diselesaikan pada projek ini
-                </p>
+                <div class="space-y-3 text-slate-300 leading-relaxed">
+                    <p><strong class="text-white">A. Permasalahan Umum:</strong> Di lingkungan instansi pemerintah, evaluasi kinerja pegawai (terutama pegawai honorer) seringkali belum berjalan secara objektif, terstruktur, dan terukur, sehingga dapat menimbulkan ketidaksesuaian antara kontribusi pegawai dan apresiasi yang diberikan.</p>
+                    <p><strong class="text-white">B. Kasus Spesifik:</strong> Pada Kejaksaan Negeri Lhokseumawe, proses penilaian kinerja pegawai honorer masih dilakukan secara manual dan tidak terstandar, sehingga kurang efisien, rentan terhadap subjektivitas penilai, serta menyulitkan proses pengambilan keputusan yang profesional (seperti perpanjangan kontrak kerja, pembinaan, atau pemberian penghargaan).</p>
+                </div>
             </div>
 
             <div>
                 <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-primary"></span> Metode / Teknologi yang Digunakan
+                    <span class="w-2 h-2 rounded-full bg-primary"></span> Metode yang Digunakan
                 </h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Alur sistem, algoritma, Framework
-                </p>
+                <div class="space-y-3 text-slate-300 leading-relaxed">
+                    <p><strong class="text-white">A. Metode Pengembangan Sistem:</strong> Menggunakan metode Waterfall yang memiliki tahapan terstruktur (Analisis Kebutuhan, Desain Sistem, Implementasi/Coding, Pengujian, dan Penerapan).</p>
+                    <p><strong class="text-white">B. Metode Pendukung Keputusan:</strong> Menggunakan metode SMART (Simple Multi Attribute Rating Technique) untuk melakukan perhitungan multikriteria secara objektif. Terdapat 6 kriteria utama yang dinilai, yaitu:</p>
+                    <ul class="list-disc list-inside space-y-1 pl-4 text-slate-300">
+                        <li>Capaian Kinerja (Output/Hasil) – Bobot 40%</li>
+                        <li>Perilaku Kerja (BerAKHLAK) – Bobot 20%</li>
+                        <li>Disiplin dan Kehadiran – Bobot 15%</li>
+                        <li>Integritas & Kepatuhan Etik – Bobot 15%</li>
+                        <li>Kepatuhan SOP dan Keamanan Dokumen – Bobot 5%</li>
+                        <li>Inisiatif dan Perbaikan Proses – Bobot 5%</li>
+                    </ul>
+                    <p><strong class="text-white">C. Teknologi:</strong> Dibangun dalam bentuk aplikasi berbasis web (menggunakan pemrograman web dan basis data) serta dilengkapi dengan fitur keamanan seperti validasi login dan captcha.</p>
+                </div>
             </div>
 
             <div>
                 <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-primary"></span> Hasil & Kesimpulan
                 </h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Hasil Akhir
-                </p>
+                <div class="space-y-3 text-slate-300 leading-relaxed">
+                    <p><strong class="text-white">A. Hasil Akhir:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 pl-4 text-slate-300">
+                        <li>Sistem berhasil diimplementasikan secara otomatis untuk mengelola data pegawai, menghitung nilai utilitas dan normalisasi bobot SMART, hingga menghasilkan perangkingan status pegawai (Layak, Perlu Dipertimbangkan, dan Tidak Layak).</li>
+                        <li>Berdasarkan pengujian fungsionalitas menggunakan Blackbox Testing, seluruh fitur sistem berjalan dengan baik tanpa error.</li>
+                        <li>Berdasarkan pengujian usability menggunakan metode System Usability Scale (SUS) kepada responden, sistem memperoleh rata-rata skor 80,92, yang dikategorikan sebagai "Good" (Baik), menunjukkan bahwa aplikasi mudah digunakan dan dapat diterima dengan baik oleh pengguna.</li>
+                    </ul>
+                    <p><strong class="text-white">B. Kesimpulan:</strong> Penelitian ini berhasil membangun sistem informasi penilaian kinerja berbasis web dengan metode SMART di Kejaksaan Negeri Lhokseumawe. Sistem ini terbukti mampu menghilangkan unsur subjektivitas manual, meningkatkan transparansi serta akuntabilitas instansi, dan memudahkan pengambil keputusan dalam mengevaluasi kinerja pegawai honorer secara objektif dan terukur.</p>
+                </div>
+            </div>
+
+            <!-- Tombol Bukti Publikasi / Link Jurnal -->
+            <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-slate-400">Klik tombol untuk melihat publikasi jurnal</p>
+                <a href="https://ijins.umsida.ac.id/index.php/ijins/article/view/1697" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-blue-600 text-white text-sm font-semibold transition-all shadow-[0_0_15px_rgba(44,103,237,0.4)] hover:-translate-y-0.5 w-full sm:w-auto justify-center">
+                    <span>Publikasi Jurnal</span>
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                </a>
             </div>
         </div>
 
