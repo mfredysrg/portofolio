@@ -89,8 +89,8 @@
                     <div class="w-24 h-1 bg-primary mx-auto rounded-full shadow-[0_0_10px_rgba(44,103,237,0.8)]"></div>
                 </div>
 
-                <div class="grid md:grid-cols-12 gap-12 items-start">
-                    <!-- Left Col -->
+                <div class="grid md:grid-cols-12 gap-12 items-center">
+                    <!-- Left Col: Profile Picture & Stats -->
                     <div class="fade-left md:col-span-5 space-y-8" style="transition-delay: 200ms;">
                         <div class="relative group">
                             <div class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
@@ -114,68 +114,78 @@
                                 <div class="text-xs text-slate-400 uppercase tracking-wider">Publikasi Artikel</div>
                             </div>
                             <div class="bg-slate-900/50 border border-slate-800 p-4 rounded-xl text-center backdrop-blur-sm hover:border-primary/50 transition-colors">
-                                <div class="text-3xl font-bold text-white mb-1 flex justify-center items-baseline">5 <span class="text-sm text-primary ml-1">+</span></div>
+                                <div class="text-3xl font-bold text-white mb-1 flex justify-center items-baseline">5 <span class="text-sm data-number ml-1">+</span></div>
                                 <div class="text-xs text-slate-400 uppercase tracking-wider">Pengalaman Organisasi</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right Col -->
-                    <div class="fade-right md:col-span-7 space-y-12" style="transition-delay: 400ms;">
-                        <!-- Pendidikan -->
-                        <div>
-                            <h3 class="text-2xl font-semibold text-white mb-4 flex items-center gap-2">
-                                <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-                                Pendidikan
+                    <!-- Right Col: Biography, Interests & Download CV Button -->
+                    <div class="fade-right md:col-span-7 space-y-8" style="transition-delay: 400ms;">
+                        
+                        <!-- Biografi & Ketertarikan -->
+                        <div class="space-y-6 text-slate-300 leading-relaxed text-base md:text-lg">
+                            <h3 class="text-2xl md:text-3xl font-semibold text-white">
+                                Mengubah Kompleksitas Menjadi Solusi Digital yang Elegan
                             </h3>
-                            <div class="space-y-6">
-                                <div class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary before:rounded-full before:shadow-[0_0_10px_rgba(44,103,237,0.8)]">
-                                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
-                                        <h4 class="text-lg font-medium text-white">Universitas Malikussaleh</h4>
-                                        <span class="text-sm text-primary font-mono">2022 - 2026</span>
+                            
+                            <p>
+                                Halo! Saya <strong class="text-white">M Fredyansyah Siregar</strong>, seorang lulusan S1 Sistem Informasi berpredikat <span class="text-primary font-medium">Cum Laude</span> dari Universitas Malikussaleh. Saya memiliki ketertarikan mendalam pada persimpangan antara teknologi web, analisis sistem yang terstruktur, dan pemanfaatan data untuk pengambilan keputusan yang strategis.
+                            </p>
+
+                            <p>
+                                Perjalanan akademik dan pengalaman profesional saya telah membentuk pola pikir yang analitis dan berorientasi pada hasil (*problem solver*). Saya sangat antusias dalam merancang antarmuka yang ramah pengguna (UI/UX), membangun sistem berbasis web yang efisien, serta mengeksplorasi riset teknologi informasi terkini.
+                            </p>
+
+                            <p class="text-slate-400 text-sm md:text-base border-l-2 border-primary pl-4 italic">
+                                "Bagi saya, teknologi bukan hanya tentang barisan kode, tetapi tentang bagaimana sebuah solusi digital dapat memberikan dampak nyata bagi masyarakat dan organisasi."
+                            </p>
+                        </div>
+
+                        <!-- Pendidikan Utama -->
+                        <div class="pt-6 border-t border-slate-800">
+                            <h4 class="text-sm font-mono uppercase tracking-wider text-primary mb-4">Pendidikan Utama</h4>
+                            
+                            <div class="relative p-6 rounded-2xl bg-gradient-to-r from-slate-900/80 to-slate-800/40 border border-slate-700/80 hover:border-primary/50 transition-all group backdrop-blur-sm">
+                                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                                    
+                                    <!-- Informasi Teks -->
+                                    <div class="space-y-1.5 flex-1">
+                                        <div class="flex flex-wrap items-center gap-2">
+                                            <span class="px-2.5 py-0.5 text-xs font-mono rounded-md bg-primary/20 text-primary border border-primary/30">Dengan Pujian (Cum Laude)</span>
+                                            <span class="text-xs text-slate-400 font-mono">2022 - 2026</span>
+                                        </div>
+                                        
+                                        <h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Universitas Malikussaleh</h4>
+                                        <div class="text-slate-300 font-medium">S1 - Sistem Informasi</div>
+                                        
+                                        <div class="pt-2 flex flex-wrap items-center gap-4 text-sm text-slate-400">
+                                            <div><strong class="text-white">IPK:</strong> <span class="text-primary font-bold">3.75</span> / 4.00</div>
+                                            <div class="hidden sm:block text-slate-600">•</div>
+                                            <div><strong class="text-white">Fokus:</strong> Analisis Sistem, Web, Database & SPK</div>
+                                        </div>
                                     </div>
-                                    <div class="text-slate-300 mb-2">S1-Sistem Informasi</div>
-                                    <div class="text-sm text-slate-400"><strong class="text-slate-300">IPK:</strong> 3.75 / 4.00 (Cum Laude)</div>
-                                    <div class="text-sm text-slate-400 mt-1"><strong class="text-slate-300">Relevan:</strong> Analisis dan Perancangan Sistem, UI/UX, Manajemen Basis Data, Pemrograman Web</div>
+
+                                    <!-- Logo Universitas di Kanan -->
+                                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-slate-900/90 border border-slate-700 flex items-center justify-center p-2.5 shrink-0 shadow-lg group-hover:border-primary/60 transition-all">
+                                        <img src="assets/logounimal.png" alt="Logo Universitas Malikussaleh" class="w-full h-full object-contain filter drop-shadow">
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Pengalaman -->
-                        <div>
-                            <h3 class="text-2xl font-semibold text-white mb-6 flex items-center gap-2">
-                                <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-                                Pengalaman
-                            </h3>
-                            <div class="space-y-8">
-                                <div class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-purple-500 before:rounded-full before:shadow-[0_0_10px_rgba(168,85,247,0.8)] after:content-[''] after:absolute after:left-[5px] after:top-5 after:bottom-[-32px] after:w-0.5 after:bg-slate-800">
-                                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
-                                        <h4 class="text-lg font-medium text-white">Enumerator</h4>
-                                        <span class="text-sm text-purple-400 font-mono">April - Juli 2026</span>
-                                    </div>
-                                    <div class="text-slate-300 mb-2">Human Initiative</div>
-                                    <p class="text-sm text-slate-400 leading-relaxed">Mengumpulkan, mencatat, dan mengolah data lapangan secara akurat.</p>
-                                </div>
-
-                                <div class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-purple-500 before:rounded-full before:shadow-[0_0_10px_rgba(168,85,247,0.8)] after:content-[''] after:absolute after:left-[5px] after:top-5 after:bottom-[-32px] after:w-0.5 after:bg-slate-800">
-                                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
-                                        <h4 class="text-lg font-medium text-white">Pengolah Data & Informasi</h4>
-                                        <span class="text-sm text-purple-400 font-mono">Januari - Februari 2025</span>
-                                    </div>
-                                    <div class="text-slate-300 mb-2">Kejaksaan Negeri Lhokseumawe</div>
-                                    <p class="text-sm text-slate-400 leading-relaxed">Pemeliharaan website dan mengelola basis data aplikasi internal.</p>
-                                </div>
-
-                                <div class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-purple-500 before:rounded-full before:shadow-[0_0_10px_rgba(168,85,247,0.8)]">
-                                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
-                                        <h4 class="text-lg font-medium text-white">Programmer</h4>
-                                        <span class="text-sm text-purple-400 font-mono">Agustus - Desember 2024</span>
-                                    </div>
-                                    <div class="text-slate-300 mb-2">UPT Bimbingan Karir dan Kewirausahaan</div>
-                                    <p class="text-sm text-slate-400 leading-relaxed">Pengelolaan website, basis data alumni (Tracer Study), dan pengembangan aplikasi.</p>
-                                </div>
-                            </div>
+                        <!-- Tombol Download CV ke Google Drive -->
+                        <div class="pt-2">
+                            <!-- Ganti LINK_DRIVE_CV_KAMU di bawah ini dengan link share Google Drive kamu -->
+                            <a href="https://drive.google.com/file/d/1sSGjKwsn_477tqBel048Lv2yE0NZBrdb/view?usp=sharing" target="_blank" rel="noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary hover:bg-blue-600 text-white font-semibold transition-all hover:shadow-[0_0_20px_rgba(44,103,237,0.6)] transform hover:-translate-y-1 group">
+                                <svg class="w-5 h-5 group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                </svg>
+                                <span>Download CV</span>
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -201,6 +211,9 @@
                     </button>
                     <button class="tab-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white" data-target="tab-skills">
                         Tech Stack
+                    </button>
+                    <button class="tab-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white" data-target="tab-certificates">
+                        Certificates
                     </button>
                 </div>
 
@@ -298,7 +311,7 @@
                                 <div>
                                     <div class="text-purple-400 font-medium text-sm mb-1">Mentor Divisi Programmer</div>
                                     <h3 class="text-lg font-bold text-white mb-2">UPT Bimbingan Karir dan Kewirausahaan</h3>
-                                    <p class="text-slate-400 text-sm">Memberikan bimbingan teknis dan arahan terstruktur kepada peserta magang  .</p>
+                                    <p class="text-slate-400 text-sm">Memberikan bimbingan teknis dan arahan terstruktur kepada peserta magang.</p>
                                 </div>
                             </div>
                             <div class="flex gap-4 p-5 rounded-2xl bg-gradient-to-r from-slate-800/50 to-transparent border-l-4 border-purple-500">
@@ -320,47 +333,174 @@
 
                     <!-- Skills Tab -->
                     <div id="tab-skills" class="tab-content hidden transition-all duration-300">
-                        <div class="space-y-8">
+                        <div class="space-y-10">
+                            
+                            <!-- Web Development Section -->
                             <div>
-                                <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                                <h3 class="text-xl font-semibold text-white mb-5 flex items-center gap-2">
                                     <span class="w-8 h-px bg-slate-600"></span> Web Development
                                 </h3>
-                                <div class="flex flex-wrap gap-3">
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">HTML</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">CSS</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">JavaScript</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">PHP</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">MySQL</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">React</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">TailwindCSS</div>
+                                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-orange-500/50 hover:bg-slate-800 hover:shadow-[0_0_15px_rgba(249,115,22,0.15)] transition-all group cursor-default">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" class="w-7 h-7 group-hover:scale-110 transition-transform">
+                                        <span class="text-slate-300 font-medium group-hover:text-white">HTML5</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 hover:bg-slate-800 hover:shadow-[0_0_15px_rgba(59,130,246,0.15)] transition-all group cursor-default">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" class="w-7 h-7 group-hover:scale-110 transition-transform">
+                                        <span class="text-slate-300 font-medium group-hover:text-white">CSS3</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-yellow-400/50 hover:bg-slate-800 hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] transition-all group cursor-default">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-7 h-7 group-hover:scale-110 transition-transform rounded-sm">
+                                        <span class="text-slate-300 font-medium group-hover:text-white">JavaScript</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-indigo-400/50 hover:bg-slate-800 hover:shadow-[0_0_15px_rgba(129,140,248,0.15)] transition-all group cursor-default">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" class="w-7 h-7 group-hover:scale-110 transition-transform">
+                                        <span class="text-slate-300 font-medium group-hover:text-white">PHP</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-400/50 hover:bg-slate-800 hover:shadow-[0_0_15px_rgba(96,165,250,0.15)] transition-all group cursor-default">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" class="w-8 h-8 group-hover:scale-110 transition-transform bg-white rounded-md p-1">
+                                        <span class="text-slate-300 font-medium group-hover:text-white">MySQL</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-cyan-400/50 hover:bg-slate-800 hover:shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all group cursor-default">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" class="w-7 h-7 group-hover:scale-110 transition-transform group-hover:animate-spin-slow">
+                                        <span class="text-slate-300 font-medium group-hover:text-white">React</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-sky-400/50 hover:bg-slate-800 hover:shadow-[0_0_15px_rgba(56,189,248,0.15)] transition-all group cursor-default">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" class="w-7 h-7 group-hover:scale-110 transition-transform">
+                                        <span class="text-slate-300 font-medium group-hover:text-white">TailwindCSS</span>
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- Tools & Software Section -->
                             <div>
-                                <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                                <h3 class="text-xl font-semibold text-white mb-5 flex items-center gap-2">
                                     <span class="w-8 h-px bg-slate-600"></span> Tools & Software
                                 </h3>
-                                <div class="flex flex-wrap gap-3">
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">Microsoft Office</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">Google Workspace</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">Canva</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">VS Code</div>
+                                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-orange-600/50 hover:bg-slate-800 transition-all group cursor-default">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" alt="MS Office" class="w-6 h-6 group-hover:scale-110 transition-transform">
+                                        <span class="text-slate-300 text-sm font-medium group-hover:text-white">MS Office</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 hover:bg-slate-800 transition-all group cursor-default">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Google Workspace" class="w-6 h-6 group-hover:scale-110 transition-transform">
+                                        <span class="text-slate-300 text-sm font-medium group-hover:text-white">Google Workspace</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50 hover:bg-slate-800 transition-all group cursor-default">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" alt="Canva" class="w-6 h-6 group-hover:scale-110 transition-transform">
+                                        <span class="text-slate-300 text-sm font-medium group-hover:text-white">Canva</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 hover:bg-slate-800 transition-all group cursor-default">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" class="w-6 h-6 group-hover:scale-110 transition-transform">
+                                        <span class="text-slate-300 text-sm font-medium group-hover:text-white">VS Code</span>
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- Soft Skills Section -->
                             <div>
-                                <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                                <h3 class="text-xl font-semibold text-white mb-5 flex items-center gap-2">
                                     <span class="w-8 h-px bg-slate-600"></span> Soft Skills
                                 </h3>
-                                <div class="flex flex-wrap gap-3">
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">Problem Solving</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">Time Management</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">Teamwork</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">Communication</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">Adaptability</div>
-                                    <div class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-primary/10 hover:border-primary/50 transition-colors cursor-default">Detail Oriented</div>
+                                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-purple-500/50 hover:bg-slate-800 transition-all group cursor-default">
+                                        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-purple-400 group-hover:bg-purple-500/10 transition-all">
+                                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                                        </div>
+                                        <span class="text-slate-300 text-sm font-medium group-hover:text-white">Problem Solving</span>
+                                    </div>
+                                    
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-emerald-500/50 hover:bg-slate-800 transition-all group cursor-default">
+                                        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-emerald-400 group-hover:bg-emerald-500/10 transition-all">
+                                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                        </div>
+                                        <span class="text-slate-300 text-sm font-medium group-hover:text-white">Time Management</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-pink-500/50 hover:bg-slate-800 transition-all group cursor-default">
+                                        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-pink-400 group-hover:bg-pink-500/10 transition-all">
+                                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                                        </div>
+                                        <span class="text-slate-300 text-sm font-medium group-hover:text-white">Teamwork</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 hover:bg-slate-800 transition-all group cursor-default">
+                                        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-blue-400 group-hover:bg-blue-500/10 transition-all">
+                                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+                                        </div>
+                                        <span class="text-slate-300 text-sm font-medium group-hover:text-white">Communication</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-amber-500/50 hover:bg-slate-800 transition-all group cursor-default">
+                                        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-amber-400 group-hover:bg-amber-500/10 transition-all">
+                                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                                        </div>
+                                        <span class="text-slate-300 text-sm font-medium group-hover:text-white">Adaptability</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-teal-500/50 hover:bg-slate-800 transition-all group cursor-default">
+                                        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-teal-400 group-hover:bg-teal-500/10 transition-all">
+                                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                                        </div>
+                                        <span class="text-slate-300 text-sm font-medium group-hover:text-white">Detail Oriented</span>
+                                    </div>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
+
+                    <!-- Certificates Tab -->
+                    <div id="tab-certificates" class="tab-content hidden transition-all duration-300">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            
+                            <!-- Template Sertifikat 1 -->
+                            <div class="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col">
+                                <!-- Kotak Gambar -->
+                                <div class="aspect-[4/3] bg-slate-900 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                                    <!-- Ganti atribut src dengan nama file gambar sertifikat kamu -->
+                                    <img src="assets/sertifikat-1.jpg" alt="Sertifikat 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                                    
+                                    <!-- Teks ini hanya akan terlihat kalau gambarnya belum ada/gagal dimuat -->
+                                    <span class="absolute text-slate-500 text-sm -z-10 font-mono">Gambar Sertifikat</span>
+                                </div>
+                                <!-- Deskripsi Sertifikat -->
+                                <div class="p-6 flex-1 flex flex-col">
+                                    <div class="text-xs font-mono text-primary mb-2">Tahun / Bulan</div>
+                                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Judul Sertifikat Web / Pelatihan</h3>
+                                    <p class="text-slate-400 text-sm mt-auto">Penyelenggara (Contoh: Dicoding, Coursera, dll)</p>
+                                </div>
+                            </div>
+
+                            <!-- Template Sertifikat 2 -->
+                            <div class="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col">
+                                <div class="aspect-[4/3] bg-slate-900 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                                    <img src="assets/sertifikat-2.jpg" alt="Sertifikat 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                                    <span class="absolute text-slate-500 text-sm -z-10 font-mono">Gambar Sertifikat</span>
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col">
+                                    <div class="text-xs font-mono text-primary mb-2">Tahun / Bulan</div>
+                                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Sertifikat Kompetensi Sistem Informasi</h3>
+                                    <p class="text-slate-400 text-sm mt-auto">Nama Lembaga</p>
+                                </div>
+                            </div>
+
+                            <!-- Template Sertifikat 3 -->
+                            <div class="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col">
+                                <div class="aspect-[4/3] bg-slate-900 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                                    <img src="assets/sertifikat-3.jpg" alt="Sertifikat 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                                    <span class="absolute text-slate-500 text-sm -z-10 font-mono">Gambar Sertifikat</span>
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col">
+                                    <div class="text-xs font-mono text-primary mb-2">Tahun / Bulan</div>
+                                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Penghargaan / Sertifikat Prestasi</h3>
+                                    <p class="text-slate-400 text-sm mt-auto">Nama Acara / Organisasi</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
