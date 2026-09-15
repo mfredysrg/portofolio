@@ -3,20 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Pengalaman - M Fredyansyah Siregar</title>
+    <title>-</title>
     
     <!-- Tailwind CSS & Config -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../tailwind-config.js"></script>
     <link rel="stylesheet" href="../style.css">
+
+    <!-- Style Animasi Masuk & Scroll Reveal -->
+    <style>
+        @keyframes smoothFadeLeft {
+            0% { opacity: 0; transform: translateX(-30px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes smoothFadeRight {
+            0% { opacity: 0; transform: translateX(30px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes smoothFadeUp {
+            0% { opacity: 0; transform: translateY(35px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .anim-left {
+            opacity: 0;
+            animation: smoothFadeLeft 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+        }
+        .anim-right {
+            opacity: 0;
+            animation: smoothFadeRight 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+        }
+        .anim-scale {
+            opacity: 0;
+            animation: smoothFadeUp 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+        }
+
+        /* Kelas untuk Scroll Reveal dari Bawah */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animasi Keren untuk Tombol Profil Sosmed */
+        .social-icon-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .social-icon-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .social-icon-btn:hover::after {
+            opacity: 1;
+        }
+        .social-icon-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 20px -5px rgba(44, 103, 237, 0.4);
+        }
+    </style>
+
 </head>
-<body class="font-sans antialiased relative min-h-screen text-slate-200">
+<body class="font-sans antialiased relative min-h-screen text-slate-200 overflow-x-hidden">
 
     <!-- Canvas Background Bintang -->
     <canvas id="starsCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0" style="background: linear-gradient(to bottom, #05050a 0%, #0a0a1a 100%)"></canvas>
 
     <!-- Tombol Kembali ke Beranda -->
-    <div class="fixed top-6 left-6 z-50">
+    <div class="fixed top-6 left-6 z-50 anim-left">
         <a href="../index.html#portfolio" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/85 backdrop-blur-md border border-white/10 text-white text-sm font-medium hover:border-primary transition-all shadow-[0_0_15px_rgba(44,103,237,0.3)]">
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
@@ -28,46 +91,74 @@
     <!-- Main Content Detail -->
     <main class="relative z-10 max-w-4xl mx-auto px-6 py-28">
         
-        <!-- Header / Jabatan & Organisasi -->
-        <div class="mb-10">
-            <span class="text-xs font-mono text-purple-400 uppercase tracking-wider bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/30">Nama Peran / Jabatan</span>
-            <h1 class="text-3xl md:text-5xl font-bold text-white mt-4 mb-3">Nama Organisasi / Program</h1>
-            <p class="text-slate-400 text-sm font-mono">Periode Pelaksanaan: Bulan Tahun - Bulan Tahun</p>
+        <!-- Header Info dengan Logo di Sebelah Kanan Judul -->
+        <div class="mb-10 flex flex-col md:flex-row md:items-center justify-between gap-6 anim-left">
+            <div class="space-y-2 flex-1">
+                <span class="text-xs font-mono text-purple-400 uppercase tracking-wider bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/30 inline-block">LDK Al-Kautsar Universitas Malikussaleh</span>
+                <h1 class="text-3xl md:text-5xl font-bold text-white mt-2">Wakil Ketua Umum</h1>
+                <p class="text-slate-400 text-lg font-medium">Januari 2026 - September</p>
+            </div>
+
+            <!-- Wadah Logo Tempat Pengalaman di Kanan -->
+            <div class="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-slate-900/80 border border-slate-700/80 flex items-center justify-center p-3 shrink-0 shadow-lg backdrop-blur-sm hover:border-purple-500/50 transition-all group anim-right">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7bRBoZOGB6IBvDcc9KHkuefxvci3IsMrOv4EvlMbtPA&s=10" alt="Logo Tempat Pengalaman" class="w-full h-full object-contain filter drop-shadow group-hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%2364748b\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'M21 15l-5-5L5 21\'/></svg>';">
+            </div>
         </div>
 
-        <!-- Dokumentasi / Foto Kegiatan Utama -->
-        <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-800/60 aspect-video mb-10 flex items-center justify-center relative backdrop-blur-sm shadow-xl">
-            <!-- Ganti dengan foto dokumentasi kegiatan organisasi ini jika ada -->
-            <span class="text-slate-500 font-mono">Dokumentasi / Foto Kegiatan Organisasi</span>
+        <!-- Carousel / Dokumentasi Gambar -->
+        <div class="mb-10 anim-scale">
+            <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-900/80 aspect-video relative backdrop-blur-sm shadow-2xl group">
+                
+                <!-- Container Gambar Carousel -->
+                <div id="carouselTrack" class="w-full h-full relative flex items-center justify-center">
+                    <!-- Gambar akan dimuat otomatis oleh script -->
+                </div>
+
+                <!-- Tombol Navigasi Kiri / Kanan -->
+                <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/70 border border-slate-700 text-white flex items-center justify-center hover:bg-primary transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 shadow-lg">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/70 border border-slate-700 text-white flex items-center justify-center hover:bg-primary transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 shadow-lg">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+
+                <!-- Indikator Titik (Dots) -->
+                <div id="carouselDots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10"></div>
+            </div>
+            <p class="text-center text-xs text-slate-400 mt-2 font-mono">Geser menggunakan tombol panah di atas untuk melihat dokumentasi kegiatan</p>
         </div>
 
-        <!-- Detail Konten Mendalam -->
-        <div class="space-y-8 bg-slate-900/60 border border-slate-800 p-8 rounded-2xl backdrop-blur-md shadow-xl">
+        <!-- Detail Konten Mendalam (Muncul dari Bawah saat Discroll / Reveal on Scroll) -->
+        <div class="reveal-on-scroll space-y-8 bg-slate-900/60 border border-slate-800 p-8 rounded-2xl backdrop-blur-md shadow-xl">
             
             <div>
                 <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-purple-500"></span> Deskripsi & Peran Utama
+                    <span class="w-2 h-2 rounded-full bg-purple-500"></span> Koordinasi Internal & Sinergi Organisasi
                 </h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Peran, tanggung jawab utama, dan lingkup kerja...
+                <p class="text-slate-300 leading-relaxed text-justify">
+                    Bertanggung jawab penuh dalam mengoordinasikan seluruh urusan internal organisasi di Lembaga Dakwah Kampus (LDK) Al-Kautsar Unimal. Berperan aktif dalam menjaga stabilitas komunikasi antar-pengurus, membangun iklim kerja yang kolaboratif, serta memastikan setiap lini departemen berjalan selaras dengan visi dan misi lembaga.
                 </p>
             </div>
 
             <div>
                 <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-purple-500"></span> Program Kerja / Kontribusi Nyata
+                    <span class="w-2 h-2 rounded-full bg-purple-500"></span> Pengawasan & Evaluasi Program Kerja Divisi
                 </h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Program kerja spesifik yang berhasil diinisiasi, tantangan yang dihadapi di lapangan, serta bagaimana cara kamu menyelesaikannya...
+                <p class="text-slate-300 leading-relaxed text-justify">
+                    Melakukan monitoring, pendampingan, dan evaluasi secara berkala terhadap seluruh program kerja yang dirancang oleh tiap divisi. Memastikan setiap agenda berjalan efektif, tepat sasaran, serta memberikan solusi taktis apabila ditemukan kendala dalam proses eksekusi di lapangan.
                 </p>
             </div>
 
             <div>
                 <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-purple-500"></span> Dampak & Pencapaian
+                    <span class="w-2 h-2 rounded-full bg-purple-500"></span> Motivasi, Kaderisasi & Pengarahan Anggota
                 </h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Hasil akhir atau dampak positif yang diberikan oleh program/organisasi tersebut kepada masyarakat atau anggota internal...
+                <p class="text-slate-300 leading-relaxed text-justify">
+                    Berperan sebagai penggerak motivasi bagi para pengurus dan kader. Memberikan arahan strategis, membangun semangat kekeluargaan, serta mengoptimalkan potensi anggota melalui pendekatan personal maupun forum koordinasi terstruktur guna menciptakan regenerasi kepemimpinan yang tangguh dan loyal.
                 </p>
             </div>
 
@@ -76,11 +167,45 @@
                 <h4 class="text-sm font-mono text-slate-400 uppercase mb-3">Kompetensi yang Diasah:</h4>
                 <div class="flex flex-wrap gap-2">
                     <span class="px-3 py-1 text-xs rounded-full bg-slate-800 text-slate-300 border border-slate-700">Leadership</span>
+                    <span class="px-3 py-1 text-xs rounded-full bg-slate-800 text-slate-300 border border-slate-700">Strategic Communication</span>
+                    <span class="px-3 py-1 text-xs rounded-full bg-slate-800 text-slate-300 border border-slate-700">Team Management</span>
+                    <span class="px-3 py-1 text-xs rounded-full bg-slate-800 text-slate-300 border border-slate-700">Organizational Governance</span>
                     <span class="px-3 py-1 text-xs rounded-full bg-slate-800 text-slate-300 border border-slate-700">Problem Solving</span>
-                    <span class="px-3 py-1 text-xs rounded-full bg-slate-800 text-slate-300 border border-slate-700">Team Coordination</span>
                 </div>
             </div>
 
+        </div>
+
+        <!-- Profil Perusahaan / Instansi (Website, Instagram, LinkedIn) dengan Animasi Keren -->
+        <div class="reveal-on-scroll pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+                <h4 class="text-sm font-semibold text-white mb-1">Informasi & Profil Resmi Program</h4>
+                <p class="text-xs text-slate-400">Kunjungi platform resmi untuk informasi lebih lanjut mengenai dokumentasi program.</p>
+            </div>
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+                
+                <!-- Link Website -->
+                <a href="https://share.google/UrchJRnTFtTNzcF4U" target="_blank" rel="noopener noreferrer" title="Website Resmi" class="social-icon-btn w-11 h-11 rounded-xl bg-slate-800/80 border border-slate-700 hover:border-primary text-slate-300 hover:text-white flex items-center justify-center shadow-lg">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                    </svg>
+                </a>
+
+                <!-- Link Instagram -->
+                <a href="https://www.instagram.com/ldkalkautsar?stkn=MXgzcGFoeHQ4aDZqOQ==" target="_blank" rel="noopener noreferrer" title="Instagram Resmi" class="social-icon-btn w-11 h-11 rounded-xl bg-slate-800/80 border border-slate-700 hover:border-pink-500 text-slate-300 hover:text-pink-400 flex items-center justify-center shadow-lg">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+
+                <!-- Link LinkedIn -->
+                <a href="https://www.linkedin.com/company/ldk-al-kautsar-universitas-malikussaleh/" target="_blank" rel="noopener noreferrer" title="LinkedIn Resmi" class="social-icon-btn w-11 h-11 rounded-xl bg-slate-800/80 border border-slate-700 hover:border-blue-500 text-slate-300 hover:text-blue-400 flex items-center justify-center shadow-lg">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+
+            </div>
         </div>
 
     </main>
@@ -90,8 +215,122 @@
         <p>© 2026 M Fredyansyah Siregar. All rights reserved.</p>
     </footer>
 
-    <!-- Script Background Canvas Bintang -->
+    <!-- Script Interaksi (Scroll Observer Berulang, Carousel, Canvas) -->
     <script>
+        // Intersection Observer agar animasi muncul kembali setiap kali di-scroll ke atas/bawah
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    } else {
+                        // Menghapus kelas 'active' saat elemen keluar layar, 
+                        // sehingga animasi terulang kembali saat di-scroll ke atas/bawah
+                        entry.target.classList.remove('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // ... (lanjutan script carousel dan canvas bintang yang sudah ada)
+    </script>
+
+    <!-- Script Interaksi (Scroll Observer, Carousel, Canvas) -->
+    <script>
+        // Intersection Observer untuk animasi muncul dari bawah saat discroll
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); // Animasi diputar sekali saat elemen masuk viewport
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Daftar gambar dokumentasi dari folder assets
+        const images = [
+            "../assets/ldk/ldk1.jpeg",
+            "../assets/ldk/ldk2.jpeg",
+            "../assets/ldk/ldk3.jpeg",
+            "../assets/ldk/ldk4.jpeg",
+            "../assets/ldk/ldk5.jpeg",
+            "../assets/ldk/ldk6.jpeg"
+        ];
+
+        let currentIndex = 0;
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+
+        function initCarousel() {
+            if (!track) return;
+            renderSlide();
+            renderDots();
+        }
+
+        function renderSlide() {
+            track.innerHTML = `
+                <img src="${images[currentIndex]}" alt="Dokumentasi ${currentIndex + 1}" 
+                     class="w-full h-full object-contain transition-opacity duration-500"
+                     onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%231e293b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-family=\'monospace\' font-size=\'6\'>Upload gambar ke assets/</text></svg>';">
+            `;
+            updateDots();
+        }
+
+        function renderDots() {
+            dotsContainer.innerHTML = '';
+            images.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.className = `w-2.5 h-2.5 rounded-full transition-all ${index === currentIndex ? 'bg-primary w-6' : 'bg-slate-600 hover:bg-slate-400'}`;
+                dot.onclick = () => {
+                    currentIndex = index;
+                    renderSlide();
+                };
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function updateDots() {
+            const dots = dotsContainer.children;
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = `w-2.5 h-2.5 rounded-full transition-all ${i === currentIndex ? 'bg-primary w-6' : 'bg-slate-600 hover:bg-slate-400'}`;
+            }
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % images.length;
+            renderSlide();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            renderSlide();
+        }
+
+        document.addEventListener('DOMContentLoaded', initCarousel);
+
+        // Canvas Background Bintang
         const canvas = document.getElementById('starsCanvas');
         if (canvas) {
             const ctx = canvas.getContext('2d');
@@ -132,7 +371,7 @@
                     
                     if (s.glow) {
                         ctx.shadowBlur = Math.random() * 10 + 5;
-                        ctx.shadowColor = '#a855f7';
+                        ctx.shadowColor = '#2c67ed';
                     } else {
                         ctx.shadowBlur = 0;
                     }

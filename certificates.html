@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Sertifikat & Penghargaan - M Fredyansyah Siregar</title>
+    
+    <!-- Tailwind CSS & Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Style Animasi Masuk & Scroll Reveal -->
+    <style>
+        @keyframes smoothFadeLeft {
+            0% { opacity: 0; transform: translateX(-30px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes smoothFadeUp {
+            0% { opacity: 0; transform: translateY(35px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .anim-left {
+            opacity: 0;
+            animation: smoothFadeLeft 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+        }
+        .anim-scale {
+            opacity: 0;
+            animation: smoothFadeUp 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+        }
+
+        /* Kelas untuk Scroll Reveal dari Bawah (Berulang saat Scroll Naik/Turun) */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased relative min-h-screen text-slate-200 overflow-x-hidden">
+
+    <!-- Canvas Background Bintang -->
+    <canvas id="starsCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0" style="background: linear-gradient(to bottom, #05050a 0%, #0a0a1a 100%)"></canvas>
+
+    <!-- Tombol Kembali ke Beranda Utama -->
+    <div class="fixed top-6 left-6 z-50 anim-left">
+        <a href="index.html#portfolio" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/85 backdrop-blur-md border border-white/10 text-white text-sm font-medium hover:border-primary transition-all shadow-[0_0_15px_rgba(44,103,237,0.3)]">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            <span>Kembali ke Beranda</span>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="relative z-10 max-w-6xl mx-auto px-6 py-28">
+        
+        <!-- Header Halaman -->
+        <div class="mb-12 text-center anim-left">
+            <span class="text-xs font-mono text-primary uppercase tracking-wider bg-primary/10 px-3 py-1 rounded-full border border-primary/30 inline-block mb-3">Pencapaian</span>
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">Sertifikat & Penghargaan</h1>
+            <p class="text-slate-400 text-base max-w-2xl mx-auto">Kumpulan dokumentasi sertifikasi kompetensi, pelatihan, seminar, dan penghargaan profesional yang telah saya peroleh.</p>
+        </div>
+
+        <!-- Grid Sertifikat (Rapi & Sejajar) -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 anim-scale">
+            
+            <!-- Sertifikat 1 -->
+            <a href="https://drive.google.com/drive/folders/link-drive-sertifikat-1" target="_blank" rel="noopener noreferrer" class="reveal-on-scroll bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col cursor-pointer shadow-xl">
+                <div class="aspect-[4/3] bg-slate-900 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                    <img src="assets/sertifikat-1.jpg" alt="Sertifikat 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%231e293b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-family=\'monospace\' font-size=\'6\'>Sertifikat 1</text></svg>';">
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="text-xs font-mono text-primary mb-2">Tahun / Bulan</div>
+                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Judul Sertifikat Web / Pelatihan</h3>
+                    <p class="text-slate-400 text-sm mt-auto">Penyelenggara (Contoh: Dicoding, Coursera, dll)</p>
+                </div>
+            </a>
+
+            <!-- Sertifikat 2 -->
+            <a href="https://drive.google.com/drive/folders/link-drive-sertifikat-2" target="_blank" rel="noopener noreferrer" class="reveal-on-scroll bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col cursor-pointer shadow-xl">
+                <div class="aspect-[4/3] bg-slate-900 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                    <img src="assets/sertifikat-2.jpg" alt="Sertifikat 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%231e293b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-family=\'monospace\' font-size=\'6\'>Sertifikat 2</text></svg>';">
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="text-xs font-mono text-primary mb-2">Tahun / Bulan</div>
+                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Sertifikat Kompetensi Sistem Informasi</h3>
+                    <p class="text-slate-400 text-sm mt-auto">Nama Lembaga</p>
+                </div>
+            </a>
+
+            <!-- Sertifikat 3 -->
+            <a href="https://drive.google.com/drive/folders/link-drive-sertifikat-3" target="_blank" rel="noopener noreferrer" class="reveal-on-scroll bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col cursor-pointer shadow-xl">
+                <div class="aspect-[4/3] bg-slate-900 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                    <img src="assets/sertifikat-3.jpg" alt="Sertifikat 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%231e293b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-family=\'monospace\' font-size=\'6\'>Sertifikat 3</text></svg>';">
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="text-xs font-mono text-primary mb-2">Tahun / Bulan</div>
+                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Penghargaan / Sertifikat Prestasi</h3>
+                    <p class="text-slate-400 text-sm mt-auto">Nama Acara / Organisasi</p>
+                </div>
+            </a>
+
+            <!-- Sertifikat 4 (Tambahkan sesuai kebutuhanmu) -->
+            <a href="https://drive.google.com/drive/folders/link-drive-sertifikat-4" target="_blank" rel="noopener noreferrer" class="reveal-on-scroll bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col cursor-pointer shadow-xl">
+                <div class="aspect-[4/3] bg-slate-900 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                    <img src="assets/sertifikat-4.jpg" alt="Sertifikat 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%231e293b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-family=\'monospace\' font-size=\'6\'>Sertifikat 4</text></svg>';">
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="text-xs font-mono text-primary mb-2">Tahun / Bulan</div>
+                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Nama Sertifikat Lainnya</h3>
+                    <p class="text-slate-400 text-sm mt-auto">Penyelenggara</p>
+                </div>
+            </a>
+
+            <!-- Sertifikat 5 -->
+            <a href="https://drive.google.com/drive/folders/link-drive-sertifikat-5" target="_blank" rel="noopener noreferrer" class="reveal-on-scroll bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col cursor-pointer shadow-xl">
+                <div class="aspect-[4/3] bg-slate-900 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                    <img src="assets/sertifikat-5.jpg" alt="Sertifikat 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%231e293b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-family=\'monospace\' font-size=\'6\'>Sertifikat 5</text></svg>';">
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="text-xs font-mono text-primary mb-2">Tahun / Bulan</div>
+                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Nama Sertifikat Lainnya</h3>
+                    <p class="text-slate-400 text-sm mt-auto">Penyelenggara</p>
+                </div>
+            </a>
+
+            <!-- Sertifikat 6 -->
+            <a href="https://drive.google.com/drive/folders/link-drive-sertifikat-6" target="_blank" rel="noopener noreferrer" class="reveal-on-scroll bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col cursor-pointer shadow-xl">
+                <div class="aspect-[4/3] bg-slate-900 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                    <img src="assets/sertifikat-6.jpg" alt="Sertifikat 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%231e293b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-family=\'monospace\' font-size=\'6\'>Sertifikat 6</text></svg>';">
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="text-xs font-mono text-primary mb-2">Tahun / Bulan</div>
+                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Nama Sertifikat Lainnya</h3>
+                    <p class="text-slate-400 text-sm mt-auto">Penyelenggara</p>
+                </div>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-slate-800/50 py-8 text-center text-slate-500 text-sm bg-black/20 backdrop-blur-sm mt-20">
+        <p>© 2026 M Fredyansyah Siregar. All rights reserved.</p>
+    </footer>
+
+    <!-- Script Animasi Scroll Observer & Canvas Bintang -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    } else {
+                        entry.target.classList.remove('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Canvas Background Bintang
+        const canvas = document.getElementById('starsCanvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let width, height, stars = [];
+            const numStars = 200;
+
+            function initStars() {
+                stars = [];
+                for (let i = 0; i < numStars; i++) {
+                    stars.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        radius: Math.random() * 1.5 + 0.1,
+                        vx: Math.floor(Math.random() * 50) - 25,
+                        vy: Math.floor(Math.random() * 50) - 25,
+                        glow: Math.random() > 0.9,
+                        twinkleSpeed: Math.random() * 0.05 + 0.01,
+                        opacity: Math.random()
+                    });
+                }
+            }
+
+            function resizeCanvas() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+                initStars();
+            }
+
+            function drawStars() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.globalCompositeOperation = "lighter";
+
+                for (let i = 0; i < stars.length; i++) {
+                    const s = stars[i];
+                    ctx.fillStyle = `rgba(255, 255, 255, ${s.opacity})`;
+                    
+                    if (s.glow) {
+                        ctx.shadowBlur = Math.random() * 10 + 5;
+                        ctx.shadowColor = '#2c67ed';
+                    } else {
+                        ctx.shadowBlur = 0;
+                    }
+
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
+                    ctx.fill();
+
+                    s.x += s.vx / 100;
+                    s.y += s.vy / 100;
+                    
+                    s.opacity += s.twinkleSpeed;
+                    if(s.opacity > 1 || s.opacity < 0.1) {
+                        s.twinkleSpeed = -s.twinkleSpeed;
+                    }
+
+                    if (s.x < 0 || s.x > width) s.vx = -s.vx;
+                    if (s.y < 0 || s.y > height) s.vy = -s.vy;
+                }
+                requestAnimationFrame(drawStars);
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+            drawStars();
+        }
+    </script>
+</body>
+</html>

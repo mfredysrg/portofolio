@@ -71,7 +71,7 @@ if (canvas) {
 }
 
 // Typing Text Effect
-const texts = ['Junior Developer', 'Tech Enthusiast', 'Information Systems Student'];
+const texts = ['Junior Developer', 'Tech Enthusiast', 'AI Engineer', 'Information Systems Student'];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
