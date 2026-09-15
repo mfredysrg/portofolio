@@ -35,9 +35,17 @@
             <p class="text-slate-400 text-lg">Indonesian Journal of Innovation Studies - Terindeks Sinta 3</p>
         </div>
 
-        <!-- Mockup / Dokumentasi Gambar Utama -->
-        <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-800/60 aspect-video mb-10 flex items-center justify-center relative backdrop-blur-sm">
-            <img src="../assets/kejaksaan1.jpg" alt="Foto bersama pejabat Kejaksaan Negeri Lhokseumawe" class="w-full h-full object-cover">
+        <!-- Carousel / Dokumentasi Gambar (Support Upload di assets) -->
+        <div class="mb-10">
+            <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-900/80 aspect-video relative backdrop-blur-sm shadow-2xl group">
+                
+                <!-- Container Gambar Carousel -->
+                <div id="carouselTrack" class="w-full h-full relative flex items-center justify-center">
+                    <!-- Gambar akan dimuat otomatis via JavaScript di bawah -->
+                </div>
+
+            </div>
+            <p class="text-center text-xs text-slate-400 mt-2 font-mono">Metode Waterfall</p>
         </div>
 
         <!-- Detail Deskripsi -->
@@ -86,15 +94,28 @@
                 </div>
             </div>
 
-            <!-- Tombol Bukti Publikasi / Link Jurnal -->
-            <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="text-sm text-slate-400">Klik tombol untuk melihat publikasi jurnal</p>
-                <a href="https://ijins.umsida.ac.id/index.php/ijins/article/view/1697" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-blue-600 text-white text-sm font-semibold transition-all shadow-[0_0_15px_rgba(44,103,237,0.4)] hover:-translate-y-0.5 w-full sm:w-auto justify-center">
-                    <span>Publikasi Jurnal</span>
-                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                    </svg>
-                </a>
+            <!-- Tombol Aksi (Bukti Publikasi Jurnal & Link Website/Demo) -->
+            <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-slate-400">Jelajahi dokumentasi dan akses langsung platform atau jurnal terkait:</p>
+                <div class="flex flex-wrap items-center gap-3 w-full md:w-auto justify-end">
+                    
+                    <!-- Tombol 1: Link Website / Demo Aplikasi -->
+                    <a href="https://github.com/mfredysrg/spk-smart.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold transition-all border border-slate-700 hover:border-primary/50 shadow-md hover:-translate-y-0.5 justify-center flex-1 md:flex-initial">
+                        <svg class="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                        </svg>
+                        <span>Lihat Website</span>
+                    </a>
+
+                    <!-- Tombol 2: Publikasi Jurnal -->
+                    <a href="https://ijins.umsida.ac.id/index.php/ijins/article/view/1697" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-blue-600 text-white text-sm font-semibold transition-all shadow-[0_0_15px_rgba(44,103,237,0.4)] hover:-translate-y-0.5 justify-center flex-1 md:flex-initial">
+                        <span>Lihat Jurnal</span>
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+
+                </div>
             </div>
         </div>
 
@@ -105,8 +126,69 @@
         <p>© 2026 M Fredyansyah Siregar. All rights reserved.</p>
     </footer>
 
-    <!-- Script Khusus Canvas Background agar Langsung Jalan di Halaman Ini -->
+    <!-- Script Carousel & Canvas Background -->
     <script>
+        // --- DATA GAMBAR DARI ASSETS ---
+        // Kamu cukup upload gambar ke folder assets, lalu daftarkan nama filenya di bawah ini:
+        const images = [
+            "../assets/kejaksaan/metode.png" // Ganti/tambahkan nama file gambar landscape atau portrait kamu di sini
+            
+        ];
+
+        let currentIndex = 0;
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+
+        function initCarousel() {
+            if (!track) return;
+            renderSlide();
+            renderDots();
+        }
+
+        function renderSlide() {
+            track.innerHTML = `
+                <img src="${images[currentIndex]}" alt="Dokumentasi Projek ${currentIndex + 1}" 
+                     class="w-full h-full object-contain transition-opacity duration-500"
+                     onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%231e293b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-family=\'monospace\' font-size=\'6\'>Upload gambar ke assets/</text></svg>';">
+            `;
+            updateDots();
+        }
+
+        function renderDots() {
+            dotsContainer.innerHTML = '';
+            images.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.className = `w-2.5 h-2.5 rounded-full transition-all ${index === currentIndex ? 'bg-primary w-6' : 'bg-slate-600 hover:bg-slate-400'}`;
+                dot.onclick = () => {
+                    currentIndex = index;
+                    renderSlide();
+                };
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function updateDots() {
+            const dots = dotsContainer.children;
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = `w-2.5 h-2.5 rounded-full transition-all ${i === currentIndex ? 'bg-primary w-6' : 'bg-slate-600 hover:bg-slate-400'}`;
+            }
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % images.length;
+            renderSlide();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            renderSlide();
+        }
+
+        // Jalankan carousel saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', initCarousel);
+
+
+        // --- SCRIPT BACKGROUND BINTANG ---
         const canvas = document.getElementById('starsCanvas');
         if (canvas) {
             const ctx = canvas.getContext('2d');

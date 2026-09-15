@@ -189,9 +189,9 @@
                 </div>
             </div>
         </section>
+                
 
-
-       <!-- Portofolio Section -->
+                <!-- Portfolio Section -->
         <section id="portfolio" class="py-24 relative z-10 bg-slate-900/30">
             <div class="max-w-6xl mx-auto px-6">
                 <!-- Judul Portofolio -->
@@ -202,7 +202,11 @@
 
                 <!-- Tabs Buttons (Tombol Pilihan) -->
                 <div class="flex flex-wrap justify-center gap-2 mb-12">
-                    <button class="tab-btn active px-6 py-2.5 rounded-full text-sm font-medium transition-all bg-primary text-white shadow-[0_0_15px_rgba(44,103,237,0.4)]" data-target="tab-projects">
+                    <!-- Tab Experience-->
+                    <button class="tab-btn active px-6 py-2.5 rounded-full text-sm font-medium transition-all bg-primary text-white shadow-[0_0_15px_rgba(44,103,237,0.4)]" data-target="tab-experience">
+                        Work / Internship Experience
+                    </button>
+                    <button class="tab-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white" data-target="tab-projects">
                         Projects & Publications
                     </button>
                     <button class="tab-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white" data-target="tab-leadership">
@@ -219,102 +223,186 @@
                 <!-- Content Area (Area Isi) -->
                 <div class="min-h-[400px] relative">
                     
-                    <!-- Projects Tab (Otomatis Terbuka) -->
-                    <div id="tab-projects" class="tab-content block transition-all duration-300">
+                    <!-- 1. Experience Tab (Tampil Otomatis Pertama Kali) -->
+                    <div id="tab-experience" class="tab-content block transition-all duration-300">
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm">
-                                <div class="text-xs font-mono text-primary mb-2">Publikasi Artikel</div>
-                                <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">Sistem Pendukung Keputusan Bantuan Sosial UMKM</h3>
-                                <p class="text-slate-400 text-sm mb-6 line-clamp-3">Integrasi ANP dan TOPSIS dalam Sistem Pendukung Keputusan Penerima Bantuan Sosial UMKM Di Kota Lhokseumawe </p>
-                                <div class="flex flex-wrap gap-2 mt-auto">
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">SPK</span>
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">ANP</span>
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">TOPSIS</span>
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">UMKM</span>
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">MCDM</span>
+                            
+                            <!-- Experience 1 -->
+                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="text-xs font-mono text-primary mb-2">April - Juli 2026</div>
+                                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Enumerator</h3>
+                                    <p class="text-slate-300 text-sm font-medium mb-3">Human Initiative</p>
+                                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Mengumpulkan, mencatat, dan mengolah data lapangan secara akurat untuk program kemanusiaan.</p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">Data Collection</span>
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">Field Research</span>
+                                    </div>
                                 </div>
                                 <div class="pt-4 border-t border-slate-700/60 flex justify-end">
-                                <a href="projects/project1.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
-                                    <span>Lihat Lebih Detail</span>
-                                    <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                    </svg>
-                                </a>
+                                    <a href="experience/experience1.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
+                                        <span>Lihat Lebih Detail</span>
+                                        <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
 
-                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm">
-                                <div class="text-xs font-mono text-primary mb-2">Publikasi Artikel</div>
-                                <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">Employee Performance Evaluation System</h3>
-                                <p class="text-slate-400 text-sm mb-6 line-clamp-3">Web-Based Simple Multi Attribute Rating Technique for Employee Performance Evaluation</p>
-                                <div class="flex flex-wrap gap-2 mt-auto">
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">DSS</span>
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">SMART</span>
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">WEBSITE</span>
+                            <!-- Experience 2 -->
+                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="text-xs font-mono text-primary mb-2">Januari - Februari 2025</div>
+                                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Pengolah Data & Informasi</h3>
+                                    <p class="text-slate-300 text-sm font-medium mb-3">Kejaksaan Negeri Lhokseumawe</p>
+                                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Pemeliharaan website dan mengelola basis data aplikasi internal instansi.</p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">Database</span>
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">Web Maintenance</span>
+                                    </div>
                                 </div>
                                 <div class="pt-4 border-t border-slate-700/60 flex justify-end">
-                                <a href="projects/project2.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
-                                    <span>Lihat Lebih Detail</span>
-                                    <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                    </svg>
-                                </a>
+                                    <a href="experience/experience2.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
+                                        <span>Lihat Lebih Detail</span>
+                                        <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
 
-                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm">
-                                <div class="text-xs font-mono text-primary mb-2">Publikasi Artikel</div>
-                                <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">IT Value Delivery di Perusahaan</h3>
-                                <p class="text-slate-400 text-sm mb-6 line-clamp-3">Systematic Literatur Review IT Value Delivery di Perusahaan.</p>
-                                <div class="flex flex-wrap gap-2 mt-auto">
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">SLR</span>
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">IT Governance</span>
+                            <!-- Experience 3 -->
+                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="text-xs font-mono text-primary mb-2">Agustus - Desember 2024</div>
+                                    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Programmer</h3>
+                                    <p class="text-slate-300 text-sm font-medium mb-3">UPT Bimbingan Karir dan Kewirausahaan</p>
+                                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Pengelolaan website, basis data alumni (Tracer Study), dan pengembangan aplikasi.</p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">Fullstack Web</span>
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">Tracer Study</span>
+                                    </div>
                                 </div>
                                 <div class="pt-4 border-t border-slate-700/60 flex justify-end">
-                                <a href="projects/project3.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
-                                    <span>Lihat Lebih Detail</span>
-                                    <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                    </svg>
-                                </a>
+                                    <a href="experience/experience3.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
+                                        <span>Lihat Lebih Detail</span>
+                                        <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
 
-                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm">
-                                <div class="text-xs font-mono text-primary mb-2">Publikasi Artikel</div>
-                                <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">Sistem Pendukung Keputusan Dekorasi Rumah</h3>
-                                <p class="text-slate-400 text-sm mb-6 line-clamp-3">Implementasi Metode Analytical Hierarchy Processes (AHP).</p>
-                                <div class="flex flex-wrap gap-2 mt-auto">
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">AHP</span>
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">SPK</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Projects & Publications Tab (Tersembunyi Default) -->
+                    <div id="tab-projects" class="tab-content hidden transition-all duration-300">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            
+                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="text-xs font-mono text-primary mb-2">Publikasi Artikel</div>
+                                    <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">Sistem Pendukung Keputusan Bantuan Sosial UMKM</h3>
+                                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Integrasi ANP dan TOPSIS dalam Sistem Pendukung Keputusan Penerima Bantuan Sosial UMKM Di Kota Lhokseumawe</p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">SPK</span>
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">ANP</span>
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">TOPSIS</span>
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">UMKM</span>
+                                    </div>
                                 </div>
                                 <div class="pt-4 border-t border-slate-700/60 flex justify-end">
-                                <a href="projects/project4.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
-                                    <span>Lihat Lebih Detail</span>
-                                    <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                    </svg>
-                                </a>
+                                    <a href="projects/project1.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
+                                        <span>Lihat Lebih Detail</span>
+                                        <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
 
-                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm">
-                                <div class="text-xs font-mono text-primary mb-2">Project</div>
-                                <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">Aplikasi Pengelolaan Kelas Karir</h3>
-                                <p class="text-slate-400 text-sm mb-6 line-clamp-3">Merancang dan mengembangkan aplikasi untuk program bimbingan karir mahasiswa di UPT Bimbingan Karir.</p>
-                                <div class="flex flex-wrap gap-2 mt-auto">
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">Web App</span>
-                                    <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">UI/UX</span>
+                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="text-xs font-mono text-primary mb-2">Publikasi Artikel</div>
+                                    <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">Employee Performance Evaluation System</h3>
+                                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Web-Based Simple Multi Attribute Rating Technique for Employee Performance Evaluation</p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">DSS</span>
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">SMART</span>
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">WEBSITE</span>
+                                    </div>
                                 </div>
                                 <div class="pt-4 border-t border-slate-700/60 flex justify-end">
-                                <a href="projects/project5.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
-                                    <span>Lihat Lebih Detail</span>
-                                    <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                    </svg>
-                                </a>
+                                    <a href="projects/project2.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
+                                        <span>Lihat Lebih Detail</span>
+                                        <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
+
+                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="text-xs font-mono text-primary mb-2">Publikasi Artikel</div>
+                                    <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">IT Value Delivery di Perusahaan</h3>
+                                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Systematic Literatur Review IT Value Delivery di Perusahaan.</p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">SLR</span>
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">IT Governance</span>
+                                    </div>
+                                </div>
+                                <div class="pt-4 border-t border-slate-700/60 flex justify-end">
+                                    <a href="projects/project3.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
+                                        <span>Lihat Lebih Detail</span>
+                                        <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="text-xs font-mono text-primary mb-2">Publikasi Artikel</div>
+                                    <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">Sistem Pendukung Keputusan Dekorasi Rumah</h3>
+                                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Implementasi Metode Analytical Hierarchy Processes (AHP).</p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">AHP</span>
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">SPK</span>
+                                    </div>
+                                </div>
+                                <div class="pt-4 border-t border-slate-700/60 flex justify-end">
+                                    <a href="projects/project4.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
+                                        <span>Lihat Lebih Detail</span>
+                                        <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl hover:border-primary transition-all group hover:-translate-y-2 backdrop-blur-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="text-xs font-mono text-primary mb-2">Project</div>
+                                    <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">Aplikasi Pengelolaan Kelas Karir</h3>
+                                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Merancang dan mengembangkan aplikasi untuk program bimbingan karir mahasiswa di UPT Bimbingan Karir.</p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">Web App</span>
+                                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-900 text-slate-300 border border-slate-700">UI/UX</span>
+                                    </div>
+                                </div>
+                                <div class="pt-4 border-t border-slate-700/60 flex justify-end">
+                                    <a href="projects/project5.html" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-blue-400 transition-colors group/link">
+                                        <span>Lihat Lebih Detail</span>
+                                        <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -349,12 +437,25 @@
                             </div>
                             <div class="flex gap-4 p-5 rounded-2xl bg-gradient-to-r from-slate-800/50 to-transparent border-l-4 border-purple-500">
                                 <div>
+                                    <div class="text-purple-400 font-medium text-sm mb-1">Ketua Kelompok KKN</div>
+                                    <h3 class="text-lg font-bold text-white mb-2">KKN PPM Universitas Malikussaleh Ke XXXVIII</h3>
+                                    <p class="text-slate-400 text-sm">Perencanaan dan pengorganisasian acara serta memotivasi anggota.</p>
+                                </div>
+                                <div class="flex justify-end pt-3 border-t border-slate-700/50">
+                                <a href="leaderships/leadership3.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+                                    <span>Lihat Detail</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-5 rounded-2xl bg-gradient-to-r from-slate-800/50 to-transparent border-l-4 border-purple-500">
+                                <div>
                                     <div class="text-purple-400 font-medium text-sm mb-1">Staf Kementerian Agama</div>
                                     <h3 class="text-lg font-bold text-white mb-2">BEM Universitas Malikussaleh</h3>
                                     <p class="text-slate-400 text-sm">Menginisiasi program kerja pembinaan karakter mahasiswa.</p>
                                 </div>
                                 <div class="flex justify-end pt-3 border-t border-slate-700/50">
-                                <a href="leaderships/leadership3.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+                                <a href="leaderships/leadership4.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
                                     <span>Lihat Detail</span>
                                     <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                                 </a>
@@ -367,7 +468,7 @@
                                     <p class="text-slate-400 text-sm">Memfasilitasi sesi pendampingan akademik bagi mahasiswa.</p>
                                 </div>
                                 <div class="flex justify-end pt-3 border-t border-slate-700/50">
-                                <a href="leaderships/leadership4.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+                                <a href="leaderships/leadership5.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
                                     <span>Lihat Detail</span>
                                     <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                                 </a>
@@ -380,7 +481,7 @@
                                     <p class="text-slate-400 text-sm">Memberikan bimbingan teknis dan arahan terstruktur kepada peserta magang.</p>
                                 </div>
                                 <div class="flex justify-end pt-3 border-t border-slate-700/50">
-                                <a href="leaderships/leadership5.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+                                <a href="leaderships/leadership6.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
                                     <span>Lihat Detail</span>
                                     <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                                 </a>
@@ -393,13 +494,13 @@
                                     <p class="text-slate-400 text-sm">Forum diskusi internasional fokus pada SDGs.</p>
                                 </div>
                                 <div class="flex justify-end pt-3 border-t border-slate-700/50">
-                                <a href="leaderships/leadership1.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+                                <a href="leaderships/leadership7.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
                                     <span>Lihat Detail</span>
                                     <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                                 </a>
                                 </div>
                                 <div class="flex justify-end pt-3 border-t border-slate-700/50">
-                                <a href="leaderships/leadership6.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+                                <a href="leaderships/leadership8.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
                                     <span>Lihat Detail</span>
                                     <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                                 </a>
@@ -412,7 +513,7 @@
                                     <p class="text-slate-400 text-sm">Bertindak sebagai Penanggung Jawab dalam merencanakan dan mengeksekusi program kontribusi sosial penyuluhan masyarakat.</p>
                                 </div>
                                 <div class="flex justify-end pt-3 border-t border-slate-700/50">
-                                <a href="leaderships/leadership7.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+                                <a href="leaderships/leadership9.html" class="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
                                     <span>Lihat Detail</span>
                                     <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                                 </a>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Pengalaman - M Fredyansyah Siregar</title>
+    
+    <!-- Tailwind CSS & Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind-config.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="font-sans antialiased relative min-h-screen text-slate-200">
+
+    <!-- Canvas Background Bintang -->
+    <canvas id="starsCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0" style="background: linear-gradient(to bottom, #05050a 0%, #0a0a1a 100%)"></canvas>
+
+    <!-- Tombol Kembali ke Beranda -->
+    <div class="fixed top-6 left-6 z-50">
+        <a href="../index.html#portfolio" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/85 backdrop-blur-md border border-white/10 text-white text-sm font-medium hover:border-primary transition-all shadow-[0_0_15px_rgba(44,103,237,0.3)]">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            <span>Kembali</span>
+        </a>
+    </div>
+
+    <!-- Main Content Detail -->
+    <main class="relative z-10 max-w-4xl mx-auto px-6 py-28">
+        
+        <!-- Header / Jabatan & Organisasi -->
+        <div class="mb-10">
+            <span class="text-xs font-mono text-purple-400 uppercase tracking-wider bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/30">Nama Peran / Jabatan</span>
+            <h1 class="text-3xl md:text-5xl font-bold text-white mt-4 mb-3">Nama Organisasi / Program</h1>
+            <p class="text-slate-400 text-sm font-mono">Periode Pelaksanaan: Bulan Tahun - Bulan Tahun</p>
+        </div>
+
+        <!-- Dokumentasi / Foto Kegiatan Utama -->
+        <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-800/60 aspect-video mb-10 flex items-center justify-center relative backdrop-blur-sm shadow-xl">
+            <!-- Ganti dengan foto dokumentasi kegiatan organisasi ini jika ada -->
+            <span class="text-slate-500 font-mono">Dokumentasi / Foto Kegiatan Organisasi</span>
+        </div>
+
+        <!-- Detail Konten Mendalam -->
+        <div class="space-y-8 bg-slate-900/60 border border-slate-800 p-8 rounded-2xl backdrop-blur-md shadow-xl">
+            
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-purple-500"></span> Deskripsi & Peran Utama
+                </h3>
+                <p class="text-slate-300 leading-relaxed">
+                    Peran, tanggung jawab utama, dan lingkup kerja...
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-purple-500"></span> Program Kerja / Kontribusi Nyata
+                </h3>
+                <p class="text-slate-300 leading-relaxed">
+                    Program kerja spesifik yang berhasil diinisiasi, tantangan yang dihadapi di lapangan, serta bagaimana cara kamu menyelesaikannya...
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-purple-500"></span> Dampak & Pencapaian
+                </h3>
+                <p class="text-slate-300 leading-relaxed">
+                    Hasil akhir atau dampak positif yang diberikan oleh program/organisasi tersebut kepada masyarakat atau anggota internal...
+                </p>
+            </div>
+
+            <!-- Skills / Kompetensi yang diasah -->
+            <div class="pt-4 border-t border-slate-800">
+                <h4 class="text-sm font-mono text-slate-400 uppercase mb-3">Kompetensi yang Diasah:</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs rounded-full bg-slate-800 text-slate-300 border border-slate-700">Leadership</span>
+                    <span class="px-3 py-1 text-xs rounded-full bg-slate-800 text-slate-300 border border-slate-700">Problem Solving</span>
+                    <span class="px-3 py-1 text-xs rounded-full bg-slate-800 text-slate-300 border border-slate-700">Team Coordination</span>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-slate-800/50 py-8 text-center text-slate-500 text-sm bg-black/20 backdrop-blur-sm mt-20">
+        <p>© 2026 M Fredyansyah Siregar. All rights reserved.</p>
+    </footer>
+
+    <!-- Script Background Canvas Bintang -->
+    <script>
+        const canvas = document.getElementById('starsCanvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let width, height, stars = [];
+            const numStars = 200;
+
+            function initStars() {
+                stars = [];
+                for (let i = 0; i < numStars; i++) {
+                    stars.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        radius: Math.random() * 1.5 + 0.1,
+                        vx: Math.floor(Math.random() * 50) - 25,
+                        vy: Math.floor(Math.random() * 50) - 25,
+                        glow: Math.random() > 0.9,
+                        twinkleSpeed: Math.random() * 0.05 + 0.01,
+                        opacity: Math.random()
+                    });
+                }
+            }
+
+            function resizeCanvas() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+                initStars();
+            }
+
+            function drawStars() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.globalCompositeOperation = "lighter";
+
+                for (let i = 0; i < stars.length; i++) {
+                    const s = stars[i];
+                    ctx.fillStyle = `rgba(255, 255, 255, ${s.opacity})`;
+                    
+                    if (s.glow) {
+                        ctx.shadowBlur = Math.random() * 10 + 5;
+                        ctx.shadowColor = '#a855f7';
+                    } else {
+                        ctx.shadowBlur = 0;
+                    }
+
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
+                    ctx.fill();
+
+                    s.x += s.vx / 100;
+                    s.y += s.vy / 100;
+                    
+                    s.opacity += s.twinkleSpeed;
+                    if(s.opacity > 1 || s.opacity < 0.1) {
+                        s.twinkleSpeed = -s.twinkleSpeed;
+                    }
+
+                    if (s.x < 0 || s.x > width) s.vx = -s.vx;
+                    if (s.y < 0 || s.y > height) s.vy = -s.vy;
+                }
+                requestAnimationFrame(drawStars);
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+            drawStars();
+        }
+    </script>
+</body>
+</html>
