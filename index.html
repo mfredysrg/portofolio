@@ -814,7 +814,7 @@
         submitBtn.disabled = true;
 
         // Kirim data form melalui EmailJS
-        emailjs.sendForm('service_xt9j52r', 'template_lbc8f5a', this)
+        emailjs.sendForm('service_xt9j52r', 'template_vh40ez3', this) //
             .then(() => {
                 alert('Pesan berhasil terkirim langsung ke email!');
                 contactForm.reset(); // Mengosongkan form otomatis agar tidak terkirim ganda
@@ -822,7 +822,8 @@
                 submitBtn.disabled = false;
             }, (error) => {
                 console.error('GAGAL...', error);
-                alert('Gagal mengirim pesan. Silakan coba lagi.');
+                // Menampilkan pesan error asli dari EmailJS agar mudah dilacak
+                alert('Gagal mengirim pesan: ' + JSON.stringify(error));
                 submitBtn.textContent = "Kirim Pesan";
                 submitBtn.disabled = false;
             });
