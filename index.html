@@ -773,53 +773,61 @@
                     </div>
 
                     <!-- Contact Form -->
-                    <div class="fade-right">
-                        <form id="contactForm" action="https://formspree.io/f/xkjgzrab" method="POST" class="space-y-4">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-slate-400 mb-1">Nama</label>
-                                <input type="text" id="name" name="name" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Nama Anda">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-slate-400 mb-1">Email</label>
-                                <input type="email" id="email" name="email" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="email@contoh.com">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-slate-400 mb-1">Pesan</label>
-                                <textarea id="message" name="message" rows="4" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none" placeholder="Tulis pesan Anda di sini..."></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-primary hover:bg-blue-600 text-white font-medium py-3 rounded-lg transition-all shadow-[0_0_15px_rgba(44,103,237,0.3)] hover:shadow-[0_0_25px_rgba(44,103,237,0.6)]">
-                                Kirim Pesan
-                            </button>
-                        </form>
-                    </div>
+<div class="fade-right">
+    <form id="contactForm" class="space-y-4">
+        <div>
+            <label for="name" class="block text-sm font-medium text-slate-400 mb-1">Nama</label>
+            <input type="text" id="name" name="from_name" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Nama Anda">
+        </div>
+        <div>
+            <label for="email" class="block text-sm font-medium text-slate-400 mb-1">Email</label>
+            <input type="email" id="email" name="from_email" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="email@gmail.com">
+        </div>
+        <div>
+            <label for="message" class="block text-sm font-medium text-slate-400 mb-1">Pesan</label>
+            <textarea id="message" name="message" rows="4" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none" placeholder="Tulis pesan Anda di sini..."></textarea>
+        </div>
+        <button type="submit" id="submitBtn" class="w-full bg-primary hover:bg-blue-600 text-white font-medium py-3 rounded-lg transition-all shadow-[0_0_15px_rgba(44,103,237,0.3)] hover:shadow-[0_0_25px_rgba(44,103,237,0.6)]">
+            Kirim Pesan
+        </button>
+    </form>
+</div>
 
-                    <!-- Script untuk mengosongkan form otomatis setelah dikirim -->
-                    <script>
-                        const form = document.getElementById("contactForm");
-                        
-                        async function handleSubmit(event) {
-                            event.preventDefault();
-                            const data = new FormData(event.target);
-                            fetch(event.target.action, {
-                                method: form.method,
-                                body: data,
-                                headers: {
-                                    'Accept': 'json'
-                                }
-                            }).then(response => {
-                                if (response.ok) {
-                                    alert("Pesan berhasil terkirim!");
-                                    form.reset(); // Mengosongkan kembali kolom input dan pesan secara otomatis
-                                } else {
-                                    alert("Oops! Terjadi kesalahan saat mengirim pesan.");
-                                }
-                            }).catch(error => {
-                                alert("Oops! Terjadi kesalahan koneksi.");
-                            });
-                        }
-                        
-                        form.addEventListener("submit", handleSubmit);
-                    </script>
+<!-- SDK EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    // Inisialisasi EmailJS dengan Public Key Anda
+    (function() {
+        emailjs.init({
+            publicKey: "MUoaewa-mCAXGM5W8",
+        });
+    })();
+
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Ubah teks tombol saat mengirim
+        submitBtn.textContent = "Mengirim...";
+        submitBtn.disabled = true;
+
+        // Kirim data form melalui EmailJS
+        emailjs.sendForm('service_xt9j52r', 'template_lbc8f5a', this)
+            .then(() => {
+                alert('Pesan berhasil terkirim langsung ke email!');
+                contactForm.reset(); // Mengosongkan form otomatis agar tidak terkirim ganda
+                submitBtn.textContent = "Kirim Pesan";
+                submitBtn.disabled = false;
+            }, (error) => {
+                console.error('GAGAL...', error);
+                alert('Gagal mengirim pesan. Silakan coba lagi.');
+                submitBtn.textContent = "Kirim Pesan";
+                submitBtn.disabled = false;
+            });
+    });
+</script>
                 </div>
             </div>
         </section>
