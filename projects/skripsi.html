@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Skripsi - M Fredyansyah Siregar</title>
+    
+    <!-- Tailwind CSS & Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind-config.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="font-sans antialiased relative min-h-screen text-slate-200 overflow-x-hidden">
+
+    <!-- Canvas Background -->
+    <canvas id="starsCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0" style="background: linear-gradient(to bottom, #05050a 0%, #0a0a1a 100%)"></canvas>
+
+    <!-- Tombol Kembali ke Beranda Utama -->
+    <div class="fixed top-6 left-6 z-50" data-aos="fade-down" data-aos-duration="800">
+        <a href="../index.html#portfolio" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/85 backdrop-blur-md border border-white/10 text-white text-sm font-medium hover:border-primary transition-all shadow-[0_0_15px_rgba(44,103,237,0.3)]">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            <span>Kembali</span>
+        </a>
+    </div>
+
+    <!-- Main Content Detail -->
+    <main class="relative z-10 max-w-4xl mx-auto px-6 py-28">
+        
+        <!-- Header Info -->
+        <div class="mb-10 text-center md:text-left" data-aos="fade-up" data-aos-duration="1000">
+            <span class="text-xs font-mono text-primary uppercase tracking-wider bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">Tugas Akhir / Skripsi</span>
+            <h1 class="text-3xl md:text-5xl font-bold text-white mt-4 mb-4 leading-tight">Sistem Pendukung Keputusan Penerima Bantuan Sosial UMKM di Kota Lhokseumawe Menggunakan Metode ANP dan TOPSIS</h1>
+            <p class="text-slate-400 text-lg">Universitas Malikussaleh - Program Studi Sistem Informasi</p>
+        </div>
+
+        <!-- Core Competencies / Skills & Focus -->
+        <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl backdrop-blur-md shadow-xl mb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <h3 class="text-sm font-mono text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Core Competencies / Technologies & Focus
+            </h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-medium">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    Analytic Network Process (ANP)
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-medium">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    SWARA Method
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-medium">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    TOPSIS Method
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-medium">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    PHP & MySQL Database
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    Multi-Criteria Decision Making (MCDM)
+                </span>
+            </div>
+        </div>
+
+        <!-- Carousel Dokumentasi / Screenshot Projek -->
+        <div class="relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-800/60 aspect-video mb-10 shadow-2xl backdrop-blur-sm" data-aos="zoom-in" data-aos-duration="1000">
+            <!-- Carousel Container -->
+            <div id="projectCarousel" class="relative w-full h-full flex transition-transform duration-500 ease-out">
+                <!-- Slide 1 -->
+                <div class="min-w-full h-full flex items-center justify-center relative bg-slate-900/80">
+                    <img src="../assets/skripsi/skripsi1.jpeg" alt="Dashboard Utama Sistem" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="absolute inset-0 hidden items-center justify-center text-slate-400 font-mono text-sm bg-slate-900/90">
+                        [ Ganti gambar di folder ../assets/skripsi/skripsi1.jpeg ]
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="min-w-full h-full flex items-center justify-center relative bg-slate-900/80">
+                    <img src="../assets/skripsi/skripsi2.jpeg" alt="Perhitungan Metode ANP & TOPSIS" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="absolute inset-0 hidden items-center justify-center text-slate-400 font-mono text-sm bg-slate-900/90">
+                        [ Ganti gambar di folder ../assets/skripsi/skripsi.jpeg ]
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="min-w-full h-full flex items-center justify-center relative bg-slate-900/80">
+                    <img src="../assets/skripsi/skripsi3.jpeg" alt="Hasil Perankingan Alternatif UMKM" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="absolute inset-0 hidden items-center justify-center text-slate-400 font-mono text-sm bg-slate-900/90">
+                        [ Ganti gambar di folder ../assets/skripsi/skripsi3.jpeg ]
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls (Buttons) -->
+            <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/50 border border-white/10 text-white hover:bg-primary transition-all backdrop-blur-md">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/50 border border-white/10 text-white hover:bg-primary transition-all backdrop-blur-md">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Carousel Indicators -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                <button onclick="currentSlide(0)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-primary transition-all indicator-dot active-dot"></button>
+                <button onclick="currentSlide(1)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-primary transition-all indicator-dot"></button>
+                <button onclick="currentSlide(2)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-primary transition-all indicator-dot"></button>
+            </div>
+        </div>
+
+        <!-- Detail Deskripsi -->
+        <div class="space-y-8 bg-slate-900/60 border border-slate-800 p-8 rounded-2xl backdrop-blur-md shadow-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-primary"></span> Latar Belakang Masalah
+                </h3>
+                <p class="text-slate-300 leading-relaxed text-justify">
+                    Berdasarkan data rekapitulasi Dinas Perindustrian, Perdagangan, dan Koperasi Kota Lhokseumawe tahun 2025, tercatat sebanyak 6.947 unit usaha UMKM. Penentuan kelayakan penerima bantuan sosial bagi sektor ini masih menghadapi kendala serius akibat proses seleksi konvensional yang rentan terhadap bias subjektivitas, kurangnya transparansi, serta lambatnya verifikasi data, sehingga berisiko memicu ketidaktepatan sasaran penyaluran dana.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-primary"></span> Metode / Teknologi yang Digunakan
+                </h3>
+                <div class="space-y-3 text-slate-300 leading-relaxed text-justify">
+                    <p><strong class="text-white">A. Integrasi Metode ANP, SWARA, & TOPSIS:</strong> Penelitian ini menerapkan kerangka kerja <em>Multi-Criteria Decision Making</em> (MCDM) hibrida. Metode <em>Analytic Network Process</em> (ANP) dan <em>Step-wise Weight Assessment Ratio Analysis</em> (SWARA) digunakan secara paralel untuk pembobotan kriteria, sementara <em>Technique for Order Preference by Similarity to Ideal Solution</em> (TOPSIS) diaplikasikan sebagai mesin perankingan alternatif berdasarkan jarak solusi ideal positif dan negatif.</p>
+                    <p><strong class="text-white">B. Parameter Penilaian Kriteria:</strong> Melibatkan 6 parameter objektif utama, yaitu Omzet Bulanan (C1 - 18,34% bobot ANP / 18,01% bobot SWARA), Total Aset Usaha (C2 - 8,72% ANP / 13,05% SWARA), Lama Usaha (C3 - 20,36% ANP / 10,44% SWARA), Tanggungan Keluarga (C4 - 19,25% ANP / 22,78% SWARA), Kepemilikan SKTM (C5 - 19,97% ANP / 20,71% SWARA), dan Riwayat Bantuan (C6 - 13,37% ANP / 15,01% SWARA).</p>
+                    <p><strong class="text-white">C. Pengembangan Sistem Berbasis Web:</strong> Sistem dibangun menggunakan bahasa pemrograman PHP, basis data relasional MySQL, serta diuji fungsionalitasnya menggunakan metode pengujian sistem Black Box Testing dengan hasil seluruh modul dinyatakan valid.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-primary"></span> Hasil & Kesimpulan
+                </h3>
+                <div class="space-y-3 text-slate-300 leading-relaxed text-justify">
+                    <p><strong class="text-white">A. Hasil Akhir & Perankingan Spesifik:</strong> Berdasarkan pengujian terhadap 8 sampel data alternatif UMKM, skenario pembobotan ANP-TOPSIS menghasilkan nilai preferensi tertinggi pada alternatif <strong class="text-white">A2 (Riski Fotokopi)</strong> sebesar <strong class="text-white">0,7886</strong> (Peringkat 1), disusul oleh A7 dan A8. Sedangkan pada skenario SWARA-TOPSIS, alternatif <strong class="text-white">A2 (Riski Fotokopi)</strong> tetap konsisten menduduki peringkat pertama dengan nilai preferensi <strong class="text-white">0,7983</strong>.</p>
+                    <p><strong class="text-white">B. Kesimpulan Utama:</strong> Implementasi sistem pendukung keputusan berbasis web ini terbukti sukses mengeliminasi unsur subjektivitas manual, mempercepat birokrasi seleksi, serta memastikan kebijakan penyaluran bantuan sosial UMKM di Kota Lhokseumawe tersalurkan secara transparan, objektif, dan tepat sasaran.</p>
+                </div>
+            </div>
+
+            <!-- Tombol Bukti Publikasi / Eprints Unimal -->
+            <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-slate-400">Ingin membaca dokumen skripsi lengkap di repositori resmi kampus?</p>
+                <a href="https://rama.unimal.ac.id/id/eprint/22026/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-blue-600 text-white text-sm font-semibold transition-all shadow-[0_0_15px_rgba(44,103,237,0.4)] hover:-translate-y-0.5 w-full sm:w-auto justify-center group">
+                    <span>Lihat Repository Skripsi</span>
+                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Sederhana -->
+    <footer class="relative z-10 border-t border-slate-800/50 py-8 text-center text-slate-500 text-sm bg-black/20 backdrop-blur-sm mt-20">
+        <p>© 2026 M Fredyansyah Siregar. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+        });
+
+        // Carousel Script Logic
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('#projectCarousel > div');
+        const dots = document.querySelectorAll('.indicator-dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            if (index >= totalSlides) slideIndex = 0;
+            else if (index < 0) slideIndex = totalSlides - 1;
+            else slideIndex = index;
+
+            const carousel = document.getElementById('projectCarousel');
+            carousel.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+            dots.forEach((dot, idx) => {
+                if (idx === slideIndex) {
+                    dot.classList.add('bg-primary', 'w-6');
+                    dot.classList.remove('bg-white/50');
+                } else {
+                    dot.classList.remove('bg-primary', 'w-6');
+                    dot.classList.add('bg-white/50');
+                }
+            });
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex - 1);
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+        }
+
+        // Auto play carousel every 5 seconds
+        setInterval(() => {
+            nextSlide();
+        }, 5000);
+    </script>
+
+    <!-- Script Khusus Canvas Background agar Langsung Jalan di Halaman Ini -->
+    <script>
+        const canvas = document.getElementById('starsCanvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let width, height, stars = [];
+            const numStars = 200;
+
+            function initStars() {
+                stars = [];
+                for (let i = 0; i < numStars; i++) {
+                    stars.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        radius: Math.random() * 1.5 + 0.1,
+                        vx: Math.floor(Math.random() * 50) - 25,
+                        vy: Math.floor(Math.random() * 50) - 25,
+                        glow: Math.random() > 0.9,
+                        twinkleSpeed: Math.random() * 0.05 + 0.01,
+                        opacity: Math.random()
+                    });
+                }
+            }
+
+            function resizeCanvas() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+                initStars();
+            }
+
+            function drawStars() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.globalCompositeOperation = "lighter";
+
+                for (let i = 0; i < stars.length; i++) {
+                    const s = stars[i];
+                    ctx.fillStyle = `rgba(255, 255, 255, ${s.opacity})`;
+                    
+                    if (s.glow) {
+                        ctx.shadowBlur = Math.random() * 10 + 5;
+                        ctx.shadowColor = '#2c67ed';
+                    } else {
+                        ctx.shadowBlur = 0;
+                    }
+
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
+                    ctx.fill();
+
+                    s.x += s.vx / 100;
+                    s.y += s.vy / 100;
+                    
+                    s.opacity += s.twinkleSpeed;
+                    if(s.opacity > 1 || s.opacity < 0.1) {
+                        s.twinkleSpeed = -s.twinkleSpeed;
+                    }
+
+                    if (s.x < 0 || s.x > width) s.vx = -s.vx;
+                    if (s.y < 0 || s.y > height) s.vy = -s.vy;
+                }
+                requestAnimationFrame(drawStars);
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+            drawStars();
+        }
+    </script>
+</body>
+</html>

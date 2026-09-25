@@ -9,14 +9,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../tailwind-config.js"></script>
     <link rel="stylesheet" href="../style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="font-sans antialiased relative min-h-screen text-slate-200">
+<body class="font-sans antialiased relative min-h-screen text-slate-200 overflow-x-hidden">
 
     <!-- Canvas Background -->
     <canvas id="starsCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0" style="background: linear-gradient(to bottom, #05050a 0%, #0a0a1a 100%)"></canvas>
 
     <!-- Tombol Kembali ke Beranda Utama -->
-    <div class="fixed top-6 left-6 z-50">
+    <div class="fixed top-6 left-6 z-50" data-aos="fade-down" data-aos-duration="800">
         <a href="../index.html#portfolio" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/85 backdrop-blur-md border border-white/10 text-white text-sm font-medium hover:border-primary transition-all shadow-[0_0_15px_rgba(44,103,237,0.3)]">
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
@@ -29,25 +31,45 @@
     <main class="relative z-10 max-w-4xl mx-auto px-6 py-28">
         
         <!-- Header Info -->
-        <div class="mb-10">
-            <span class="text-xs font-mono text-primary uppercase tracking-wider">Publikasi Artikel / Project</span>
-            <h1 class="text-3xl md:text-5xl font-bold text-white mt-2 mb-4">Judul Projek</h1>
-            <p class="text-slate-400 text-lg">Ringkasan singkat projek.</p>
+        <div class="mb-10 text-center md:text-left" data-aos="fade-up" data-aos-duration="1000">
+            <span class="text-xs font-mono text-primary uppercase tracking-wider bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">Project / Mata Kuliah E-Commerce</span>
+            <h1 class="text-3xl md:text-5xl font-bold text-white mt-4 mb-4 leading-tight">Perancangan Aplikasi E-Commerce Berbasis Website dan Mobile Pada Toko Citra Kosmetik</h1>
+            <p class="text-slate-400 text-lg">Universitas Malikussaleh - Program Studi Sistem Informasi</p>
         </div>
 
-        <!-- Mockup / Dokumentasi Gambar Utama -->
-        <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-800/60 aspect-video mb-10 flex items-center justify-center relative backdrop-blur-sm">
-            <span class="text-slate-500 font-mono">Screenshot / Dokumentasi Projek</span>
+        <!-- Core Competencies / Technologies & Focus -->
+        <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl backdrop-blur-md shadow-xl mb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <h3 class="text-sm font-mono text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Core Technologies & Architecture
+            </h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-medium">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    Web Application (Admin)
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-medium">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    Mobile Application (User)
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-medium">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                    Database Management (ERD)
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    Software Development Life Cycle (SDLC)
+                </span>
+            </div>
         </div>
 
         <!-- Detail Deskripsi -->
-        <div class="space-y-8 bg-slate-900/60 border border-slate-800 p-8 rounded-2xl backdrop-blur-md shadow-xl">
+        <div class="space-y-8 bg-slate-900/60 border border-slate-800 p-8 rounded-2xl backdrop-blur-md shadow-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div>
                 <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-primary"></span> Latar Belakang Masalah
                 </h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Penjelasan detail mengenai permasalahan yang diselesaikan pada projek ini
+                <p class="text-slate-300 leading-relaxed text-justify">
+                    Transformasi digital di sektor ritel kosmetik sangat didorong oleh pesatnya kemajuan teknologi informasi. Pada Toko Citra Kosmetik (berlokasi di Desa Batuphat, Kota Lhokseumawe), proses penjualan konvensional masih menghadapi berbagai kendala seperti keterbatasan akses informasi produk bagi pelanggan, antrean langsung di toko, serta keterbatasan pilihan metode pembayaran. Oleh karena itu, diperlukan sistem e-commerce terintegrasi untuk memperluas jangkauan pasar dan meningkatkan efisiensi operasional.
                 </p>
             </div>
 
@@ -55,18 +77,38 @@
                 <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-primary"></span> Metode / Teknologi yang Digunakan
                 </h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Alur sistem, algoritma, Framework
-                </p>
+                <div class="space-y-3 text-slate-300 leading-relaxed text-justify">
+                    <p><strong class="text-white">A. Metode Pengumpulan Data:</strong> Menggunakan metode observasi langsung kegiatan operasional toko, wawancara mendalam dengan pemilik dan staf, serta studi pustaka terkait desain UI/UX dan sistem e-commerce.</p>
+                    <p><strong class="text-white">B. Model Pengembangan Sistem (SDLC):</strong> Menerapkan model Waterfall yang terstruktur, mencakup tahapan Analisis Kebutuhan Sistem, Perancangan Sistem (Desain ERD, Use Case, Activity Diagram), Penulisan Kode Program (Coding), hingga Pengujian Program.</p>
+                    <p><strong class="text-white">C. Arsitektur Dual-Platform:</strong> Membangun dua sistem terpusat yaitu aplikasi berbasis website untuk admin (manajemen produk, stok masuk/keluar, promo, dan laporan transaksi) serta aplikasi berbasis mobile untuk konsumen (katalog, keranjang, checkout, pembayaran, dan live chat).</p>
+                </div>
             </div>
 
             <div>
                 <h3 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-primary"></span> Hasil & Kesimpulan
                 </h3>
-                <p class="text-slate-300 leading-relaxed">
-                    Hasil Akhir
-                </p>
+                <div class="space-y-3 text-slate-300 leading-relaxed text-justify">
+                    <p><strong class="text-white">A. Hasil Pengujian Sistem:</strong> Berdasarkan pengujian fungsionalitas menggunakan metode <em>Black Box Testing</em> pada menu admin dan user, seluruh fitur utama mulai dari proses login, manajemen kategori, pengelolaan produk, transaksi keranjang, hingga pelacakan resi dinyatakan berjalan valid dan sukses tanpa kendala.</p>
+                    <p><strong class="text-white">B. Kesimpulan:</strong> Implementasi aplikasi e-commerce berbasis website dan mobile ini sukses memberikan solusi fleksibel bagi konsumen dalam mengakses produk kosmetik sekaligus membantu toko mengotomatisasi manajemen data secara terpusat dan akurat.</p>
+                </div>
+            </div>
+
+            <!-- Tombol Menuju Link GitHub (Web & Mobile) -->
+            <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-slate-400">Ingin melihat kode sumber proyek?</p>
+                <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                    <!-- Tombol GitHub Web -->
+                    <a href="https://drive.google.com/file/d/1_Jc7U-ATF7hPRWvDXCWt2H45j42UYg4t/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white text-sm font-semibold transition-all shadow-[0_0_15px_rgba(44,103,237,0.2)] hover:-translate-y-0.5">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        <span>Zip (Web)</span>
+                    </a>
+                    <!-- Tombol GitHub Mobile -->
+                    <a href="https://drive.google.com/file/d/1n-NP6nLPNx3NCEhPMqkXRTvlPT2oIAHD/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-blue-600 text-white text-sm font-semibold transition-all shadow-[0_0_15px_rgba(44,103,237,0.4)] hover:-translate-y-0.5">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        <span>Zip (Mobile)</span>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -76,6 +118,16 @@
     <footer class="relative z-10 border-t border-slate-800/50 py-8 text-center text-slate-500 text-sm bg-black/20 backdrop-blur-sm mt-20">
         <p>© 2026 M Fredyansyah Siregar. All rights reserved.</p>
     </footer>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+        });
+    </script>
 
     <!-- Script Khusus Canvas Background agar Langsung Jalan di Halaman Ini -->
     <script>
